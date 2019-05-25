@@ -1,0 +1,5 @@
+[production]
+# generate a new key with:
+# sed -i "s/TmHwQIUmqc9def9BUtFs7gz66gniic9v5eD0ugzMO8Y=/$(openssl rand -base64 32)/g" Rocket.toml
+secret_key = "TmHwQIUmqc9def9BUtFs7gz66gniic9v5eD0ugzMO8Y="
+limits = { forms = 524288 }
