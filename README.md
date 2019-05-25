@@ -106,7 +106,7 @@ Install the pre-requisites
 
 ```
 sudo apt install musl-tools 
-rustup target add x86-unknown-linux-musl
+rustup target add x86_64-unknown-linux-musl
 ```
 
 Build the binary:
@@ -114,13 +114,13 @@ Build the binary:
 ```
 git clone https://github.com/timClicks/microservice-checksum
 cd microservice-checksum
-cargo build --release --target x86-unknown-linux-musl
+cargo build --release --target x86_64-unknown-linux-musl
 ```
 
 Verify:
 
 ```
-target/x86-unknown-linux-musl/release/microservice-checksum
+target/x86_64-unknown-linux-musl/release/microservice-checksum
 ```
 
 
