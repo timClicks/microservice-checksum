@@ -20,8 +20,8 @@ impl<'v> FromFormValue<'v> for Crc16Polynomial {
 
     fn from_form_value(form_value: &'v RawStr) -> Result<Crc16Polynomial, &'v RawStr> {
         match form_value.as_str() {
-            "usb" => Ok(Crc16Polynomial::X25),
-            "x25" => Ok(Crc16Polynomial::Usb),
+            "usb" => Ok(Crc16Polynomial::Usb),
+            "x25" => Ok(Crc16Polynomial::X25),
             custom => {
                 match str::parse::<u16>(custom) {
                     Ok(n) => Ok(Crc16Polynomial::Custom(n)),
