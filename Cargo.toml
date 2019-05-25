@@ -1,5 +1,7 @@
 [package]
 name = "microservice-checksum"
+description = "An HTTP microservice that checksums its inputs."
+tags = ["crc", "http", "microservice"]
 version = "0.1.0"
 authors = ["Tim McNamara <tim.mcnamara@canonical.com>"]
 edition = "2018"
@@ -14,7 +16,11 @@ rocket_codegen = "0.4.1"
 #json = "0.11"
 #env_logger = "0.6"
 
+[badges]
+maintenance = { status = "actively-maintained" }
+
 [profile.release]
 lto = true
-codegen-units = 1
-opt-level = 2
+codegen-units = 4
+debug-assertions = true
+linker-plugin-lto = true
