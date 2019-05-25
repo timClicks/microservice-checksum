@@ -6,8 +6,7 @@ extern crate rocket;
 
 use crc::{crc16, Hasher16, crc32, Hasher32, crc64, Hasher64};
 use rocket::http::{RawStr};
-use rocket::data::{Data,FromDataSimple};
-use rocket::request::{Form,FromFormValue,Request};
+use rocket::request::{Form, FromFormValue};
 
 #[derive(Debug)]
 enum Crc16Polynomial {
